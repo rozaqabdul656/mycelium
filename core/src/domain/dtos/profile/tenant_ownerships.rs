@@ -140,7 +140,7 @@ impl TenantsOwnership {
                     match TenantOwnership::from_str(i) {
                         Ok(ownership) => Some(ownership),
                         Err(err) => {
-                            tracing::warn!(error = %err, "Failed to parse TenantOwnership from URL");
+                            tracing::warn!("Failed to parse TenantOwnership from URL");
                             None
                         }
                     }
